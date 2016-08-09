@@ -6,12 +6,14 @@ A work in progress, and in progress meaning I just started this today. Goal is t
 
 8/9/16
 
-- Add auto install WordPress 
+- Add auto install WordPress
+- Change the Scotch index.php to info.php 
 - Add xDebug install
 - Tweaks to vagrant file
   
 TODO 
 
+- Test xDebug
 - GUI for site setup (site name, dev url, base WP options)
 - Randomize box IP address (similar to WP Lib Box) 
 
