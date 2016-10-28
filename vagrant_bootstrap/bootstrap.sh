@@ -1,44 +1,32 @@
 #!/usr/bin/env bash
 
 # Update repositories
-apt-get update
+echo "============================================"
+echo "Updating Repositories."
+echo "============================================"
+sudo apt-get update
 
 # PHP tools
-apt-get install -y php5-xdebug php5-xmlrpc mc default-jre
-
+echo "============================================"
+echo "Installing PHP tools."
+echo "============================================"
+sudo apt-get install -y php5-xdebug php5-xmlrpc mc default-jre
 echo "; xdebug
-xdebug.remote_connect_back = 1
-xdebug.remote_enable = 1
-xdebug.remote_handler = \"dbgp\"
-xdebug.remote_port = 9000
-xdebug.var_display_max_children = 512
-xdebug.var_display_max_data = 1024
-xdebug.var_display_max_depth = 10
-xdebug.idekey = \"PHPSTORM\"" >> /etc/php5/apache2/php.ini
+zend_extension=xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_connect_back=1
+xdebug.remote_port=9000
+xdebug.remote_host=192.168.33.10" >> /etc/php5/apache2/conf.d/20-xdebug.ini
 # add composer to path
+"============================================"
+echo "Adding composer to PATH."
+echo "============================================"
 export PATH="~/.composer/vendor/bin:$PATH"
-# install WP
+# restart Apache
 echo "============================================"
-echo "Installing WordPress."
+echo "Restarting Apache."
+sudo service apache2 restart
 echo "============================================"
-cd /var/www/public
-mv index.php info.php
-#download wordpress
-curl -O https://wordpress.org/latest.tar.gz
-#unzip wordpress
-tar -zxvf latest.tar.gz
-#change dir to wordpress
-cd wordpress
-#copy file to parent dir
-cp -rf . ..
-#move back to parent dir
-cd ..
-#remove files from wordpress folder
-rm -R wordpress
-#remove zip file
-rm latest.tar.gz
-# Finally, restart apache
-service apache2 restart
 echo "============================================"
 echo "Site setup complete."
 echo "============================================"
