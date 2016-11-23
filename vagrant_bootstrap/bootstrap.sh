@@ -18,7 +18,7 @@ xdebug.remote_connect_back=1
 xdebug.remote_port=9000
 xdebug.remote_host=192.168.33.10" >> /etc/php5/apache2/conf.d/20-xdebug.ini
 # add composer to path
-"============================================"
+echo "============================================"
 echo "Adding composer to PATH."
 echo "============================================"
 export PATH="~/.composer/vendor/bin:$PATH"
