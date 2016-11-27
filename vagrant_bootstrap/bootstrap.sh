@@ -1,16 +1,24 @@
 #!/usr/bin/env bash
 
-# Update repositories
+# Disable obsolete PPA
 echo "============================================"
-echo "Updating Repositories."
+echo "Disabling obsolete PPA and reverting to official packages."
 echo "============================================"
-sudo apt-get update
-
-# PHP tools
+sudo apt-get install ppa-purge
+yes | sudo ppa-purge ppa:ondrej/php5-5.6
+# Update to current PPA
 echo "============================================"
-echo "Installing PHP tools."
+echo "Adding current PPA and updating packages."
 echo "============================================"
-sudo apt-get install -y php5-xdebug php5-xmlrpc mc default-jre
+yes | sudo add-apt-repository ppa:ondrej/php
+yes | sudo apt-get update
+yes | sudo apt-get upgrade
+sudo apt-get autoremove
+# Install Xdebug
+echo "============================================"
+echo "Installing Xdebug."
+echo "============================================"
+yes | sudo apt-get install php5-xdebug
 echo "; xdebug
 zend_extension=xdebug.so
 xdebug.remote_enable=1
