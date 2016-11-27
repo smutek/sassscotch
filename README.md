@@ -1,6 +1,6 @@
 #SassScotch
 
-A fork of..... Scotch Box
+A fork of..... [Scotch Box](https://github.com/scotch-io/scotch-box)
 
 The amalgamation of the name is based on the mysterious ape man, Sasquatch (also known as Bigfoot), not the stylesheet language we all know and love)
 
@@ -68,6 +68,8 @@ It was last updated in November of 2005 and doesn't seem to be regularly maintai
 Again, no idea what I'm doing, but if updating everything makes it possible to install Xdebug then it seems to follow that the base box probably needs a refresh. Another example, WP-CLI was added in November (but no Xdebug because it will "throw beginners of their game"?) but the WP-CLI version that ships with the box is out of date and isn't compatible with the current version of WordPress. So it needs to be immediately updated in order to be used.
 
 I don't know, Scotch isn't really a solution for me anymore and rather than trying to make it work for me I think I'd personally be better off learning how to make my own box.
+
+Regardless, I'm super appreciative to have been able to use ScotchBox for the past couple years. Thanks for the great work, I've learned a ton.
 
 8/9/16
 
