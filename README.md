@@ -2,10 +2,18 @@
 
 A fork of..... Scotch Box
 
+The amalgamation of the name is based on the mysterious ape man, Sasquatch (also known as Bigfoot), not the stylesheet language we all know and love)
+
 A work in progress, and in progress meaning I just started this today. Goal is to make a light weight alternative to VVV for use with WordPress development. Needs to install WP automagically and also needs to install xDebug.
 
-11/27/16
-## Xdebug working but not worth the trouble
+## 11/27/16 Xdebug working, not worth the trouble, no longer a work in progress
+
+TODO:
+
+- Stop trying to make this work
+- Make my own box
+
+I'm not going to work on this fork anylonger, but ongoing conversation on Xdebug and ScotchBox can be followed here: https://github.com/scotch-io/scotch-box/issues/7
 
 I think the issue has been that the PPA is obsolete. See: http://askubuntu.com/questions/741913/php7-0-dev-installation-fails-on-ubuntu-14-0-4
 
